@@ -1,9 +1,30 @@
-
-import {createRouter,createWebHashHistory} from "vue-router";
-import Index from "../pages/index/Index.vue";
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Layout from '../pages/Layout.vue'
 
 const routes = [
-  { path: '/', component: Index },
+  {
+    path: '/',
+    component: Layout,
+    redirect: 'index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('../pages/index/Index.vue')
+      }
+    ]
+  },
+  {
+    path: '/403',
+    component: () => import('../pages/403.vue')
+  },
+  {
+    path: '/login',
+    component: () => import('../pages/Login.vue')
+  },
+  {
+    path: '/:pathMatch(.*)',
+    component: () => import('../pages/404.vue')
+  }
 ]
 
 const router = createRouter({
@@ -11,4 +32,4 @@ const router = createRouter({
   routes
 })
 
-export default  router
+export default router

@@ -4,10 +4,8 @@
 
 <script>
 export default {
-  name: "Index"
+  name: 'IndexView'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
