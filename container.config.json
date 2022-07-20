@@ -1,6 +1,6 @@
 {
   "containerPort": 80,
-  "minNum": 1,
+  "minNum": 2,
   "maxNum": 10,
   "cpu": 0.25,
   "mem": 0.5,
