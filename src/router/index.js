@@ -14,8 +14,8 @@ const routes = [
     ]
   },
   {
-    path: '/403',
-    component: () => import('../pages/403.vue')
+    path: '/404',
+    component: () => import('../pages/404.vue')
   },
   {
     path: '/login',
